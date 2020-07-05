@@ -1,5 +1,6 @@
 # Projectile-motion-with-MatPlotLib
 Python script that calculates optimal angle and time to hit a target given speed, horizontal and vertical displacement.
+
 The question is as follows:
 
 "That’s all very well, but you can’t just fly towards the goal in Quidditch, you’ll get a bludger in the face!"
