@@ -19,3 +19,5 @@ Which goal should they aim for in order to have the shortest time of flight (and
 
 This is a python script that uses matplotlib and basic SUVAT maths to make a brute force algorithm that tests every possible angle between minimum and maximum values 
 (step of 0.02 degrees). It then finds the angle with the least distance from the target, given the projections speed of course.
+
+N.B: TO RUN THE PROGRAMME, SIMPLY DOWNLOAD tkinterUI.py AND projmotion.py TO THE SAME FOLDER AND RUN tkinterUI.py
