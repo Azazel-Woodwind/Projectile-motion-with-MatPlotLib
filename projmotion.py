@@ -1,4 +1,4 @@
-from math import sin, cos, radians, inf, atan
+from math import sin, cos, radians, inf, atan, degrees
 from matplotlib import pyplot as plt
 from numpy import arange
 
@@ -82,13 +82,13 @@ def bruteForce(start, stop, rng, pos, v, neg = 1):
 def main(velocity, rng, pos):
     try:
         if pos == 0:
-            optAngle, optTime, x, y = bruteForce(0.01, 90, rng, pos, velocity)
+            optAngle, optTime, x, y = bruteForce(0.02, 90, rng, pos, velocity)
         elif pos > 0:
-            optAngle, optTime, x, y = bruteForce(round(atan(pos/rng), 2), 90, rng, pos, velocity)
+            optAngle, optTime, x, y = bruteForce(degrees(round(atan(pos/rng), 2)), 90, rng, pos, velocity)
         else:
-            optHorizAng = round(bruteForce(0.01, 90, rng, 0, velocity)[0], 2)
-            optAngle, optTime, x, y = bruteForce(optHorizAng, round(atan(pos/rng), 2), rng, pos, velocity, -1)
-    except:
+            optHorizAng = round(bruteForce(0.02, 90, rng, 0, velocity)[0], 2)
+            optAngle, optTime, x, y = bruteForce(optHorizAng, degrees(round(atan(pos/rng), 2)), rng, pos, velocity, -1)
+    except ValueError:
         return -1
 
     return round(optAngle, 2), round(optTime, 2), x, y
